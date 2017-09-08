@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现图片的绝对居中</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h3>方式1：定位</h3>
+<div class="container">
+    top:0 left:0 right:0 bottom:0
+    <img class="img img1" src="img/p%20(1).jpg" alt="">
+</div>
+<div class="container">
+    margin:-50%
+    <img class="img img2" src="img/p%20(1).jpg" alt="">
+</div>
+<div class="container">
+    translate(-50%,50%)
+    <img class="img img3" src="img/p%20(1).jpg" alt="">
+</div>
+<h3>方式2：表格单元格(Table-Cell)</h3>
+<div class="is-table">
+    <div class="is-table-cell">
+        <img class="img1" src="img/p%20(2).jpg" alt="">
+    </div>
+</div>
+<h3>方式3：行内块</h3>
+<div class="is-inline">
+    <img class="img1" src="img/p%20(3).jpg" alt="">
+</div>
+<h3>方式4:空标签加行高</h3>
+<div class="is-empty">
+    <img class="img1" src="img/p%20(4).jpg" alt="">
+    <span class="empty-ele"></span>
+</div>
+<h3>方法5：flex布局</h3>
+<div class="is-flex">
+    <img class="img1" src="img/p%20(5).jpg" alt="">
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+@charset "utf-8";
+.container {
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  border: 1px solid #333;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  img {
+    width: 100px;
+    height: 120px;
+    //采用定位的方式
+    &.img1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    //负margin
+    &.img2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -60px;
+      margin-left: -50px;
+    }
+    //tranlate
+    &.img3 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.is-table {
+  display: table;
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  border: 1px solid #333;
+  .is-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .img1 {
+    width: 80px;
+    height: 120px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.is-inline {
+  text-align: center;
+  overflow: auto;
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  border: 1px solid #333;
+  &::after {
+    content: '';
+    height: 100%;
+    margin-left: -0.25em; //水平居中hack
+  }
+  &::after, .img1 {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .img1 {
+    max-width: 50%; //内容块宽度不能超过容器的100% - 0.25em。
+  }
+}
+
+.is-empty {
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  border: 1px solid #333;
+  overflow: hidden;
+  text-align: center;
+  .img1 {
+    width: 50%;
+  }
+  .img1, .empty-ele {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .empty-ele {
+    width: 0;
+    height: 100%;
+  }
+}
+
+
+.is-flex{
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  border: 1px solid #333;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .img1{
+    width: 50%;
+  }
+}
